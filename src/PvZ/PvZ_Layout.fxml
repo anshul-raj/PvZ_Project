@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="BasePane" maxHeight="675.0" maxWidth="1158.0" minHeight="675.0" minWidth="1158.0" prefHeight="675.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PvZ.Controller">
+   <children>
+      <ImageView fx:id="background_image" fitHeight="682.0" fitWidth="1653.0" preserveRatio="true">
+         <image>
+            <Image url="@resources/img/Background1.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="garden_road" focusTraversable="true" layoutX="206.0" layoutY="94.0" prefHeight="567.0" prefWidth="937.0">
+         <children>
+            <ImageView fx:id="LM1" fitHeight="65.0" fitWidth="80.0" layoutX="8.0" layoutY="26.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Lawnmover.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="LM2" fitHeight="65.0" fitWidth="80.0" layoutX="8.0" layoutY="135.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Lawnmover.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="LM3" fitHeight="65.0" fitWidth="80.0" layoutX="8.0" layoutY="258.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Lawnmover.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="LM4" fitHeight="65.0" fitWidth="80.0" layoutX="8.0" layoutY="367.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Lawnmover.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="LM5" fitHeight="65.0" fitWidth="80.0" layoutX="8.0" layoutY="481.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Lawnmover.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="74.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="341.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Potato-Mine_Animated.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="74.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="163.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="74.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="163.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="74.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="163.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="74.0" layoutY="444.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="163.0" layoutY="444.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="252.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="163.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="252.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="440.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="252.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="341.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="252.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="341.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="252.0" layoutY="444.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Sunflower1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="341.0" layoutY="442.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="529.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="618.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="707.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="796.0" layoutY="-11.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="341.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="440.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="529.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="618.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="707.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="796.0" layoutY="98.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="440.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="529.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="618.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="707.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="796.0" layoutY="221.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="440.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="529.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="618.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="707.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="796.0" layoutY="330.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="440.0" layoutY="442.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="529.0" layoutY="442.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="618.0" layoutY="442.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="707.0" layoutY="442.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="796.0" layoutY="442.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Peashooter1_Original.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="930.0" layoutY="5.0" prefHeight="58.0" prefWidth="219.0">
+         <children>
+            <Button fx:id="BackButton" layoutX="87.0" layoutY="6.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="46.0" prefWidth="124.0" text="Back To Menu" />
+            <ImageView fitHeight="58.0" fitWidth="60.0" layoutX="14.0">
+               <image>
+                  <Image url="@resources/img/Shovel.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="1137.0" layoutY="14.0" prefHeight="666.0" prefWidth="452.0">
+         <children>
+            <ImageView fitHeight="231.0" fitWidth="191.0" layoutX="137.0" layoutY="344.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Zombie1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="231.0" fitWidth="191.0" layoutX="98.0" layoutY="46.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Zombie1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="124.0" layoutX="25.0" layoutY="125.0">
+               <image>
+                  <Image url="@resources/img/gangLeader_Animted.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="124.0" layoutX="45.0" layoutY="290.0">
+               <image>
+                  <Image url="@resources/img/gangLeader_Animted.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="231.0" fitWidth="191.0" layoutX="103.0" layoutY="195.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Zombie1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="234.0" fitWidth="219.0" layoutX="185.0" layoutY="106.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Conehead_Zombie1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="234.0" fitWidth="219.0" layoutX="212.0" layoutY="205.0" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img/Conehead_Zombie1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</Pane>
