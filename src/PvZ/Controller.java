@@ -55,23 +55,25 @@ public class Controller implements Initializable {
         t2.setCycleCount(1);
 
         SequentialTransition s = new SequentialTransition(t1, t2);
-//        s.play();
+        s.play();
 
     }
 
     @FXML
     public void OpenMainMenu(ActionEvent actionEvent) throws IOException {
-//        Parent GameScene = FXMLLoader.load(getClass().getResource("Main-Menu.fxml"));
-//        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-//        window.setScene(new Scene((GameScene)));
-//        window.show();
-//        GameScene.requestFocus();
         if (k > 4) {
             k = 0;
             p++;
         }
-        if (p<=9 && k<=4){
+        if (p<9){
             Plants plant = new PeaShooter(p,k++);
+        }
+        else {
+            Parent GameScene = FXMLLoader.load(getClass().getResource("resources/FxmlFiles/Main-Menu.fxml"));
+            Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            window.setScene(new Scene((GameScene)));
+            window.show();
+            GameScene.requestFocus();
         }
     }
 }
