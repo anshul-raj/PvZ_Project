@@ -30,15 +30,15 @@ class PeaShooter extends Plants{
         FileInputStream input = new FileInputStream("src/PvZ/resources/img/PeaShooter.gif");
         Image i = new Image(input);
         img = new ImageView(i);
-        img.setFitHeight(102);
-        img.setFitWidth(107);
-        img.relocate(Main.ORIGIN_X+x*Main.X,Main.ORIGIN_Y+y*Main.Y);
+        img.setFitHeight(Main.ImageHeight);
+        img.setFitWidth(Main.ImageWidth);
+        img.relocate(Main.ORIGIN_X+(x*Main.X),Main.ORIGIN_Y+(y*Main.Y));
         garden.getChildren().add(img);
         Launch();
     }
 
     public void Launch(){
-        Projectile p = new Pea(Main.ORIGIN_X+PresentTile.getKey()*Main.X+74
-                ,Main.ORIGIN_Y+PresentTile.getValue()*Main.Y+19,garden);
+        Projectile p = new Pea(Main.ORIGIN_X+(PresentTile.getKey()*Main.X)+78
+                ,Main.ORIGIN_Y+(PresentTile.getValue()*Main.Y)+25,garden);
     }
 }

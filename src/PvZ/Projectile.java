@@ -38,12 +38,12 @@ class Pea extends  Projectile{
             this.i = new ImageView(new Image(input));
             this.i.relocate(x,y);
             System.out.println(x+" "+y);
-            KeyValue k = new KeyValue(i.layoutXProperty(),930);
+            KeyValue k = new KeyValue(i.layoutXProperty(),1130);
             KeyValue appear = new KeyValue(i.opacityProperty(),1);
             Timeline t1 = new Timeline(new KeyFrame(Duration.seconds(0.1),appear));
-            Timeline t2 = new Timeline(new KeyFrame(Duration.millis(((930-x)*1000)/350.0),k));
+            Timeline t2 = new Timeline(new KeyFrame(Duration.millis(((1130-x)*1000)/350.0),k));
             SequentialTransition s = new SequentialTransition(t1,t2);
-//            s.setCycleCount(TranslateTransition.INDEFINITE);
+            s.setCycleCount(TranslateTransition.INDEFINITE);
             p.getChildren().add(this.i);
             s.play();
         }

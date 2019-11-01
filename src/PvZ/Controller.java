@@ -37,7 +37,7 @@ public class Controller implements Initializable {
     @FXML
     public Button BackButton;
     int k = 0;
-    int p = 0;
+    int p = 1;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -70,8 +70,8 @@ public class Controller implements Initializable {
             k = 0;
             p++;
         }
-        if (p<=8 && k<=4){
-            Plants plant = new PeaShooter(p, k++);
+        if (p<=9 && k<=4){
+            Plants plant = new PeaShooter(p,k++);
         }
     }
 }

@@ -24,14 +24,16 @@ import javax.swing.text.html.ImageView;
 import java.awt.*;
 
 public class Main extends Application {
-    public static final int ORIGIN_X = 74;
-    public static final int ORIGIN_Y = -11;
-    public static final int X = 100;
-    public static final int Y = 115;
+    public static final int ORIGIN_X = 90;
+    public static final int ORIGIN_Y = 24;
+    public static final int X = 108;
+    public static final int Y = 135;
+    public static final int ImageWidth = 116;
+    public static final int ImageHeight = 111;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent MainMenuScene = FXMLLoader.load(getClass().getResource("Main-Menu.fxml"));
+        Parent MainMenuScene = FXMLLoader.load(getClass().getResource("resources/FxmlFiles/Main-Menu.fxml"));
         primaryStage.setScene(new Scene(MainMenuScene));
         primaryStage.show();
         MainMenuScene.requestFocus();

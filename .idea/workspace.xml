@@ -5,18 +5,25 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/PvZ_Layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/PvZ_Layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/PvZ_Layout.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/Levels.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/Main-Menu.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Plants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Plants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/PvZ_Layout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/PvZ_Layout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/PvZ_Layout.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/resources/StyleSheets/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/resources/StyleSheets/Button.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="209" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -248,7 +255,10 @@
       <workItem from="1572503984399" duration="5666000" />
       <workItem from="1572609942407" duration="1070000" />
       <workItem from="1572615214359" duration="2418000" />
-      <workItem from="1572617905151" duration="9097000" />
+      <workItem from="1572617905151" duration="11590000" />
+      <workItem from="1572629724154" duration="3282000" />
+      <workItem from="1572634289263" duration="277000" />
+      <workItem from="1572634636662" duration="2203000" />
     </task>
     <task id="LOCAL-00001" summary="Main-Menu_Complete">
       <created>1572371543329</created>
@@ -264,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572618461766</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Main-Menu_Complete">
+      <created>1572627180926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572627180926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,5 +305,10 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Main-Menu_Complete" />
     <option name="LAST_COMMIT_MESSAGE" value="Main-Menu_Complete" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PvZ_Project$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1572634487032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>PvZ.*</FILTER>
+    </SUITE>
   </component>
 </project>

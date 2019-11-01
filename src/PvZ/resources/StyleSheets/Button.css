@@ -1,7 +1,22 @@
 
 .button{
-    -fx-border-radius: 100px;
-    /*-fx-background-color: transparent;*/
+    -fx-background-radius: 7px;
     -fx-background-color: linear-gradient(from 25% 25% to 100% 100% ,#410471,#ea2da3);
     -fx-font-family: 'Sedgwick Ave Display', cursive;
+    -fx-font-size: 33px;
+}
+
+.MenuBtn{
+    -fx-background-radius: 7px;
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100% ,#410471,#ea2da3);
+    -fx-font-family: 'Sedgwick Ave Display', cursive;
+    -fx-font-size: 30px;
+}
+
+.MenuBtn:hover{
+    -fx-font-size: 30px;
+}
+
+.button:hover{
+    -fx-font-size: 38px;
 }

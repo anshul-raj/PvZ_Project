@@ -46,7 +46,7 @@ public class MainMenuController implements Initializable {
     @FXML
     public void StartGame(ActionEvent actionEvent) throws IOException {
 
-        Parent GameScene = FXMLLoader.load(getClass().getResource("PvZ_Layout.fxml"));
+        Parent GameScene = FXMLLoader.load(getClass().getResource("resources/FxmlFiles/PvZ_Layout.fxml"));
         Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(new Scene((GameScene)));
         window.show();
