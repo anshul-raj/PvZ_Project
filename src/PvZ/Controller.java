@@ -1,6 +1,5 @@
 package PvZ;
 
-
 import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,7 +42,7 @@ public class Controller implements Initializable {
         KeyValue disappear = new KeyValue(garden_road.opacityProperty(), 0, Interpolator.EASE_OUT);
         KeyValue right = new KeyValue(BasePane.layoutXProperty(), -383, Interpolator.EASE_OUT);
 
-        Timeline t1 = new Timeline(new KeyFrame(Duration.seconds(2), right, disappear));
+        Timeline t1 = new Timeline(new KeyFrame(Duration.seconds(3), right, disappear));
         t1.setCycleCount(1);
 
         KeyValue reappear = new KeyValue(garden_road.opacityProperty(), 1, Interpolator.EASE_IN);
@@ -54,6 +53,8 @@ public class Controller implements Initializable {
 
         SequentialTransition s = new SequentialTransition(t1, t2);
         s.play();
+
+        Projectile p = new Pea(237,9,garden_road);
     }
 
     @FXML

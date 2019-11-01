@@ -29,9 +29,6 @@ public class MainMenuController implements Initializable {
 
     int i=0;
 
-
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
@@ -53,7 +50,7 @@ public class MainMenuController implements Initializable {
         Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(new Scene((GameScene)));
         window.show();
-
+        window.requestFocus();
     }
 
 }
