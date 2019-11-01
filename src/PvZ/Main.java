@@ -7,6 +7,9 @@ package PvZ;
 // OY = 26
 // Y = 109
 
+// PeaX = 74
+// PeaY = 19
+
 import javafx.animation.*;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -21,6 +24,10 @@ import javax.swing.text.html.ImageView;
 import java.awt.*;
 
 public class Main extends Application {
+    public static final int ORIGIN_X = 74;
+    public static final int ORIGIN_Y = -11;
+    public static final int X = 100;
+    public static final int Y = 115;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

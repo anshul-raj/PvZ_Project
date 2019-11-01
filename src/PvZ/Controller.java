@@ -36,9 +36,12 @@ public class Controller implements Initializable {
     public Pane garden_road;
     @FXML
     public Button BackButton;
+    int k = 0;
+    int p = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Character.garden = garden_road;
         KeyValue disappear = new KeyValue(garden_road.opacityProperty(), 0, Interpolator.EASE_OUT);
         KeyValue right = new KeyValue(BasePane.layoutXProperty(), -383, Interpolator.EASE_OUT);
 
@@ -52,17 +55,23 @@ public class Controller implements Initializable {
         t2.setCycleCount(1);
 
         SequentialTransition s = new SequentialTransition(t1, t2);
-        s.play();
+//        s.play();
 
-        Projectile p = new Pea(237,9,garden_road);
     }
 
     @FXML
     public void OpenMainMenu(ActionEvent actionEvent) throws IOException {
-        Parent GameScene = FXMLLoader.load(getClass().getResource("Main-Menu.fxml"));
-        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(new Scene((GameScene)));
-        window.show();
-        GameScene.requestFocus();
+//        Parent GameScene = FXMLLoader.load(getClass().getResource("Main-Menu.fxml"));
+//        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+//        window.setScene(new Scene((GameScene)));
+//        window.show();
+//        GameScene.requestFocus();
+        if (k > 4) {
+            k = 0;
+            p++;
+        }
+        if (p<=8 && k<=4){
+            Plants plant = new PeaShooter(p, k++);
+        }
     }
 }
