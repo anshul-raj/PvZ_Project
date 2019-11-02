@@ -4,6 +4,7 @@ import javafx.animation.*;
 import javafx.beans.InvalidationListener;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -45,20 +46,16 @@ public class Controller implements Initializable {
     public ImageView PotatomineCard;
     public ImageView WallnutCard;
     public MenuButton PauseBtn;
+    public Pane PausePane;
     //--------------//
     int k = 0;
     int p = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        PausePane.setDisable(true);
+        PausePane.setOpacity(0);
 
-        MenuItem i1 = new MenuItem("Exit");
-        MenuItem i2 = new MenuItem("Save and Exit");
-        MenuItem i3 = new MenuItem("Mute");
-
-        PauseBtn.getItems().set(0,i1);
-        PauseBtn.getItems().set(1,i2);
-        PauseBtn.getItems().add(i3);
 
         Character.garden = garden;
 
@@ -132,14 +129,17 @@ public class Controller implements Initializable {
     }
 
     public void ResumeGame(MouseEvent actionEvent){
-
+        PausePane.setDisable(true);
+        PausePane.setOpacity(0);
     }
 
     public void SaveGame(ActionEvent actionEvent) {
+
     }
 
     public void OpenSaveMenu(ActionEvent actionEvent) {
-
+        PausePane.setDisable(false);
+        PausePane.setOpacity(1);
     }
 
 

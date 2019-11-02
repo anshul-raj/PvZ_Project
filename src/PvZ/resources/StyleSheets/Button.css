@@ -3,31 +3,21 @@
     -fx-src : url('https://fonts.googleapis.com/css?family=Griffy&display=swap');
 }
 
-.button{
-    -fx-background-radius: 7px;
-    -fx-background-color: linear-gradient(from 25% 25% to 100% 100% ,#410471,#ea2da3);
-    -fx-font-family: 'Sedgwick Ave Display',cursive;
-    -fx-font-size: 33px;
-}
-
-.menu-button{
+.menubutton{
     -fx-background-radius: 7px;
     -fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #161d57, #6300a9);
     -fx-font-family: 'Sedgwick Ave Display',cursive;
     -fx-font-size: 25px;
+    -fx-color : white;
 }
 
 .MenuBtn{
     -fx-background-radius: 7px;
     -fx-background-color: linear-gradient(from 25% 25% to 100% 100% ,#410471,#ea2da3);
     -fx-font-family: 'Sedgwick Ave Display', cursive;
-    -fx-font-size: 30px;
+    -fx-font-size: 33px;
 }
 
 .MenuBtn:hover{
     -fx-font-size: 30px;
-}
-
-.button:hover{
-    -fx-font-size: 39px;
 }
