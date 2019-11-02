@@ -1,6 +1,9 @@
 package PvZ;
 
 import javafx.animation.*;
+import javafx.beans.InvalidationListener;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,6 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -18,39 +23,43 @@ import javafx.event.ActionEvent;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.security.Key;
+import java.sql.Time;
+import java.util.*;
 
 public class Controller implements Initializable {
+
     @FXML
     public ImageView background_image;
-    @FXML
     public ImageView LM1;
-    @FXML
     public ImageView LM2;
-    @FXML
     public ImageView LM3;
-    @FXML
     public ImageView LM4;
-    @FXML
     public ImageView LM5;
-    @FXML
     public Pane BasePane;
-    @FXML
     public Pane garden;
-    @FXML
-    public Button BackButton;
-    @FXML
     public Pane LeftPanel;
     public ImageView SunflowerCard;
     public ImageView PeashooterCard;
     public ImageView CherrybombCard;
     public ImageView PotatomineCard;
     public ImageView WallnutCard;
+    public MenuButton PauseBtn;
+    //--------------//
     int k = 0;
     int p = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        MenuItem i1 = new MenuItem("Exit");
+        MenuItem i2 = new MenuItem("Save and Exit");
+        MenuItem i3 = new MenuItem("Mute");
+
+        PauseBtn.getItems().set(0,i1);
+        PauseBtn.getItems().set(1,i2);
+        PauseBtn.getItems().add(i3);
+
         Character.garden = garden;
 
         LeftPanel.setOpacity(0);
@@ -70,21 +79,17 @@ public class Controller implements Initializable {
         KeyValue LeftPanelVisible = new KeyValue(LeftPanel.opacityProperty(),1);
         Timeline t3 = new Timeline(new KeyFrame(Duration.seconds(0.2),LeftPanelVisible));
 
-//        SequentialTransition s = new SequentialTransition(t1,t2,t3);
+        SequentialTransition s = new SequentialTransition(t1,t2,t3);
 
 //        testing
-        SequentialTransition s = new SequentialTransition(t3);
-
+//        SequentialTransition s = new SequentialTransition(t3);
         s.play();
 
     }
 
     @FXML
     public void OpenMainMenu(ActionEvent actionEvent) throws IOException {
-        Parent GameScene = FXMLLoader.load(getClass().getResource("resources/FxmlFiles/Main-Menu.fxml"));
-        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(new Scene((GameScene)));
-        window.show();
+        Main.ChangeScreen((Node)actionEvent.getSource(),"resources/FxmlFiles/Main-Menu.fxml");
     }
 
     @FXML
@@ -124,5 +129,21 @@ public class Controller implements Initializable {
                     break;
             }
         }
+    }
+
+    public void ResumeGame(MouseEvent actionEvent){
+
+    }
+
+    public void SaveGame(ActionEvent actionEvent) {
+    }
+
+    public void OpenSaveMenu(ActionEvent actionEvent) {
+
+    }
+
+
+    public void ExitGame(ActionEvent actionEvent) {
+        System.exit(0);
     }
 }
