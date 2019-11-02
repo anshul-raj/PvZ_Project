@@ -47,7 +47,7 @@ public class Controller implements Initializable {
     public ImageView PotatomineCard;
     public ImageView WallnutCard;
     int k = 0;
-    int p = 1;
+    int p = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
