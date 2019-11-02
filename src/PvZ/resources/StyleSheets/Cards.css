@@ -1,0 +1,18 @@
+
+.Sunflower{
+    -fx-background-image: url("../img/SunflowerCard.PNG") 134px 84px;
+}
+.Peashooter{
+    -fx-background-image: url("../img/PeashooterCard.PNG");
+}
+.cherrybomb{
+    -fx-background-image: url("../img/CherryBombCard.png");
+}
+.potatomine{
+    -fx-background-image: url("../img/PotatoMineSeedPacket.png");
+}
+.wallnnut{
+    -fx-background-image: url("../img/SunflowerCard.PNG");
+}
+
+
