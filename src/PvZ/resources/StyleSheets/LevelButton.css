@@ -1,0 +1,11 @@
+.level1{
+    -fx-background-image: url(../img/Lvl1_T.png);
+    -fx-background-radius: 25px;
+    -fx-background-color: transparent;
+    -fx-background-size: 190px 200px;
+}
+
+.lvl1_label{
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+}

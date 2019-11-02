@@ -50,4 +50,8 @@ public class MainMenuController implements Initializable {
         Main.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/PvZ_Layout.fxml");
     }
 
+    @FXML
+    public void ShowLevel(ActionEvent actionEvent) throws IOException {
+        Main.ChangeScreen((Node) actionEvent.getSource(), "resources/FxmlFiles/Levels.fxml");
+    }
 }

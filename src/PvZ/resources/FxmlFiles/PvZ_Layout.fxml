@@ -138,7 +138,7 @@
             </ImageView>
             <Button fx:id="SaveBtn" defaultButton="true" layoutX="600.0" layoutY="529.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="114.0" styleClass="menubutton" stylesheets="@../StyleSheets/Button.css" text="Save" textFill="WHITE" />
             <Button fx:id="ExitBtn" defaultButton="true" layoutX="752.0" layoutY="529.0" mnemonicParsing="false" onAction="#ExitGame" prefHeight="52.0" prefWidth="114.0" styleClass="menubutton" stylesheets="@../StyleSheets/Button.css" text="Exit" textFill="WHITE" />
-            <Button fx:id="MuteBtn" defaultButton="true" layoutX="904.0" layoutY="529.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="114.0" styleClass="menubutton" stylesheets="@../StyleSheets/Button.css" text="Mute" textFill="WHITE" />
+            <Button fx:id="MuteBtn" defaultButton="true" layoutX="904.0" layoutY="529.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="52.0" prefWidth="114.0" styleClass="menubutton" stylesheets="@../StyleSheets/Button.css" text="Menu" textFill="WHITE" />
          </children>
       </Pane>
    </children>
