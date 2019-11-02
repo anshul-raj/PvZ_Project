@@ -100,27 +100,22 @@ public class Controller implements Initializable {
         if (p<9){
             switch (name) {
                 case "SunflowerCard": {
-                    System.out.println("if name.equals( 1");
                     Plants plant = new Sunflower(p, k++);
                     break;
                 }
                 case "PeashooterCard": {
-                    System.out.println("if name.equals( 2");
                     Plants plant = new PeaShooter(p, k++);
                     break;
                 }
                 case "CherrybombCard": {
-                    System.out.println("if name.equals( 3");
                     Plants plant = new Cherrybomb(p, k++);
                     break;
                 }
                 case "PotatomineCard": {
-                    System.out.println("if name.equals( 4");
                     Plants plant = new Potatomine(p, k++);
                     break;
                 }
                 case "WallnutCard": {
-                    System.out.println("if name.equals( 5");
                     Plants plant = new Walnut(p, k++);
                     break;
                 }
