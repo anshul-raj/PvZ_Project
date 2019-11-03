@@ -47,6 +47,8 @@ public class Controller implements Initializable {
     public ImageView WallnutCard;
     public MenuButton PauseBtn;
     public Pane PausePane;
+    public ImageView TestSun;
+    public ImageView TestZombie;
     //--------------//
     int k = 0;
     int p = 0;
@@ -74,10 +76,15 @@ public class Controller implements Initializable {
         t2.setCycleCount(1);
 
         KeyValue LeftPanelVisible = new KeyValue(LeftPanel.opacityProperty(),1);
-        Timeline t3 = new Timeline(new KeyFrame(Duration.seconds(0.2),LeftPanelVisible));
+        Timeline t3 = new Timeline(new KeyFrame(Duration.seconds(0.2),LeftPanelVisible,new KeyValue(TestZombie.opacityProperty(),1)));
 
-        SequentialTransition s = new SequentialTransition(t1,t2,t3);
+        Timeline t4 = new Timeline(new KeyFrame(Duration.seconds(5),new KeyValue(TestSun.layoutYProperty(),200)),
+                      new KeyFrame(Duration.seconds(8),new KeyValue(TestZombie.layoutXProperty(),200)));
 
+        t4.setCycleCount(Timeline.INDEFINITE);
+
+        SequentialTransition s = new SequentialTransition(t1,t2,t3,t4);
+        TestZombie.setOpacity(0);
 //        testing
 //        SequentialTransition s = new SequentialTransition(t3);
         s.play();
