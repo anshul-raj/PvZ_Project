@@ -17,9 +17,9 @@ public class Character {
     }
 
     public void Summon(int x,int y) throws FileNotFoundException {
-        img.setFitHeight(Main.ImageHeight);
-        img.setFitWidth(Main.ImageWidth);
-        img.relocate(Main.ORIGIN_X+(x*Main.X),Main.ORIGIN_Y+(y*Main.Y));
+        img.setFitHeight(Application_PvZ.ImageHeight);
+        img.setFitWidth(Application_PvZ.ImageWidth);
+        img.relocate(Application_PvZ.ORIGIN_X+(x* Application_PvZ.X), Application_PvZ.ORIGIN_Y+(y* Application_PvZ.Y));
         garden.getChildren().add(img);
     }
 

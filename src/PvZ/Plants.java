@@ -5,7 +5,6 @@ import javafx.scene.image.ImageView;
 import javafx.util.Pair;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 class Plants extends Character{
@@ -37,8 +36,8 @@ class PeaShooter extends Plants implements Attacker{
     }
 
     public void Launch(){
-        Projectile p = new Pea(Main.ORIGIN_X+(PresentTile.getKey()*Main.X)+78
-                ,Main.ORIGIN_Y+(PresentTile.getValue()*Main.Y)+25,garden);
+        Projectile p = new Pea(Application_PvZ.ORIGIN_X+(PresentTile.getKey()* Application_PvZ.X)+78
+                , Application_PvZ.ORIGIN_Y+(PresentTile.getValue()* Application_PvZ.Y)+25,garden);
     }
 
     @Override

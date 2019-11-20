@@ -5,9 +5,9 @@ import javafx.scene.Node;
 
 import java.io.IOException;
 
-public class Levels {
+public class LevelsController {
 
     public void LoadLevel(ActionEvent actionEvent) throws IOException {
-        Main.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/PvZ_Layout.fxml");
+        Application_PvZ.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/PvZ_Layout.fxml");
     }
 }

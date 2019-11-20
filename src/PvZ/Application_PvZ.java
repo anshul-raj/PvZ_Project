@@ -10,22 +10,19 @@ package PvZ;
 // PeaX = 74
 // PeaY = 19
 
-import javafx.animation.*;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
-import javax.swing.text.html.ImageView;
-import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
 
-public class Main extends Application {
+public class Application_PvZ extends Application{
+    private ArrayList<User> userlist = new ArrayList<>();
+    private User CurrentUser;
     public static final int ORIGIN_X = 90;
     public static final int ORIGIN_Y = 24;
     public static final int X = 108;
@@ -35,18 +32,29 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent MainMenuScene = FXMLLoader.load(getClass().getResource("resources/FxmlFiles/Main-Menu.fxml"));
-        primaryStage.setScene(new Scene(MainMenuScene));
+        Parent ChooseUserScene = FXMLLoader.load(getClass().getResource("resources/FxmlFiles/Choose-User.fxml"));
+        primaryStage.setScene(new Scene(ChooseUserScene));
         primaryStage.show();
-        MainMenuScene.requestFocus();
-//        c.ShowZombie();
+        ChooseUserScene.requestFocus();
     }
 
     public static void ChangeScreen(Node n,String s) throws IOException {
-        Parent newScreen = FXMLLoader.load(Main.class.getResource(s));
+        Parent newScreen = FXMLLoader.load(Application_PvZ.class.getResource(s));
         Stage window = (Stage) (n.getScene().getWindow());
         window.setScene(new Scene((newScreen)));
         window.show();
+    }
+
+    public void newUser(String name){
+        userlist.add(new User(name));
+    }
+
+    public void Startgame(){
+
+    }
+
+    public void LoadUser(int i){
+        CurrentUser = userlist.get(i-1);
     }
 
     public static void main(String[] args) {

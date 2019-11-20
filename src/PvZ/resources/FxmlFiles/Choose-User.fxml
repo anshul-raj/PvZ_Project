@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="BackgroundPane" maxHeight="815.0" maxWidth="1450.0" minHeight="675.0" minWidth="1158.0" prefHeight="815.0" prefWidth="1386.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PvZ.ChooseUserController">
+    <ImageView fx:id="BkgImgMM" fitHeight="815.0" fitWidth="1386.0">
+        <Image url="@../img/LoadingScreen.png" />
+    </ImageView>
+   <Pane layoutX="114.0" layoutY="292.0" prefHeight="489.0" prefWidth="461.0">
+      <children>
+         <Button fx:id="Usr4" layoutX="249.0" layoutY="174.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="71.0" prefWidth="201.0" styleClass="MenuBtn" stylesheets="@../StyleSheets/Button.css" text="4" textAlignment="JUSTIFY" textFill="WHITE" />
+         <Button fx:id="Usr5" layoutX="22.0" layoutY="259.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="71.0" prefWidth="201.0" styleClass="MenuBtn" stylesheets="@../StyleSheets/Button.css" text="5" textAlignment="JUSTIFY" textFill="WHITE" />
+         <Button layoutX="112.0" layoutY="371.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="237.0" styleClass="MenuBtn" stylesheets="@../StyleSheets/Button.css" text="New User" textFill="WHITE" />
+         <Button fx:id="Usr1" layoutX="22.0" layoutY="81.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="71.0" prefWidth="201.0" styleClass="MenuBtn" stylesheets="@../StyleSheets/Button.css" text="1" textAlignment="JUSTIFY" textFill="WHITE" />
+         <Button fx:id="Usr2" layoutX="249.0" layoutY="81.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="71.0" prefWidth="201.0" styleClass="MenuBtn" stylesheets="@../StyleSheets/Button.css" text="2" textAlignment="JUSTIFY" textFill="WHITE" />
+         <Button fx:id="Usr3" layoutX="22.0" layoutY="174.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="71.0" prefWidth="201.0" styleClass="MenuBtn" stylesheets="@../StyleSheets/Button.css" text="3" textAlignment="JUSTIFY" textFill="WHITE" />
+         <Button fx:id="Usr6" layoutX="249.0" layoutY="259.0" mnemonicParsing="false" onAction="#OpenMainMenu" prefHeight="71.0" prefWidth="201.0" styleClass="MenuBtn" stylesheets="@../StyleSheets/Button.css" text="6" textAlignment="JUSTIFY" textFill="WHITE" />
+         <Text layoutX="48.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose User" textAlignment="CENTER" wrappingWidth="364.40087890625">
+            <font>
+               <Font size="49.0" />
+            </font>
+         </Text>
+      </children>
+   </Pane>
+</AnchorPane>
