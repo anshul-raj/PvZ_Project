@@ -1,10 +1,11 @@
 package PvZ;
 
 import javax.swing.text.html.ImageView;
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Level {
+public class Level implements Serializable {
     private ArrayList<Plants> AvaialablePlants = new ArrayList<>();
     private ArrayList<Zombies> ZombiesList = new ArrayList<>();
     private ImageView Prize;

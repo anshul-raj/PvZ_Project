@@ -4,8 +4,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Pair;
 import java.io.FileNotFoundException;
+import java.io.Serializable;
 
-public class Character {
+public class Character implements Serializable {
     protected int Health;
     protected Pair<Integer,Integer> PresentTile;
     protected static Pane garden;

@@ -140,11 +140,7 @@ public class Controller implements Initializable {
         System.exit(0);
     }
 
-    public void IncreaseSun(){
-        SunsCollected.setText( Integer.toString(Integer.parseInt(SunsCollected.getText()) + 25));
-    }
-
-    public void ReduceSun(int x){
-        SunsCollected.setText( Integer.toString(Integer.parseInt(SunsCollected.getText()) - x));
+    public void UpdateSuns(){
+        SunsCollected.setText(Integer.toString(Main.currentGame.getSunsCollected()));
     }
 }
