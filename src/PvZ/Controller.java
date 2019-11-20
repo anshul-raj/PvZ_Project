@@ -45,7 +45,6 @@ public class Controller implements Initializable {
     public ImageView CherrybombCard;
     public ImageView PotatomineCard;
     public ImageView WallnutCard;
-    public MenuButton PauseBtn;
     public Pane PausePane;
     public ImageView TestSun;
     public ImageView TestZombie;

@@ -3,7 +3,6 @@ package PvZ;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Pair;
-
 import java.io.FileNotFoundException;
 
 public class Character {
@@ -12,7 +11,10 @@ public class Character {
     protected static Pane garden;
     protected ImageView img;
 
-    public void TakeDamage(int damage){ }
+    public void TakeDamage(int damage){
+        this.Health-=damage;
+        if (Health<=0){this.remove();}
+    }
 
     public void Summon(int x,int y) throws FileNotFoundException {
         img.setFitHeight(Main.ImageHeight);
@@ -21,5 +23,7 @@ public class Character {
         garden.getChildren().add(img);
     }
 
-    public void remove(){ }
+    private void remove(){
+        garden.getChildren().remove(this.img);
+    }
 }
