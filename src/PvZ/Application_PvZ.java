@@ -20,6 +20,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
+abstract class GameVariableCollection{
+    Game CurrentGame;
+}
+
 public class Application_PvZ extends Application{
     private ArrayList<User> userlist = new ArrayList<>();
     private User CurrentUser;

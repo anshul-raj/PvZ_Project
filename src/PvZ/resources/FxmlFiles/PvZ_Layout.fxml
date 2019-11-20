@@ -119,7 +119,7 @@
                <Image url="@../img/SunCollectedDisplay.png" />
             </image>
          </ImageView>
-            <Text layoutX="224.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="CENTER" wrappingWidth="143.2704657316208">
+            <Text fx:id="SunsCollected" layoutX="224.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="CENTER" wrappingWidth="143.2704657316208">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>

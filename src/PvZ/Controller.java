@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 import javafx.event.ActionEvent;
 
@@ -34,6 +35,7 @@ public class Controller implements Initializable {
     public Pane PausePane;
     public ImageView TestSun;
     public ImageView TestZombie;
+    public Text SunsCollected;
     //--------------//
     int k = 0;
     int p = 0;
@@ -134,8 +136,15 @@ public class Controller implements Initializable {
         PausePane.setOpacity(1);
     }
 
-
     public void ExitGame(ActionEvent actionEvent) {
         System.exit(0);
+    }
+
+    public void IncreaseSun(){
+        SunsCollected.setText( Integer.toString(Integer.parseInt(SunsCollected.getText()) + 25));
+    }
+
+    public void ReduceSun(int x){
+        SunsCollected.setText( Integer.toString(Integer.parseInt(SunsCollected.getText()) - x));
     }
 }
