@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Changed Sunflower gif">
-      <change afterPath="$PROJECT_DIR$/src/PvZ/Main.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="User Serialization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Application_PvZ.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/ChooseUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/ChooseUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Essentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Essentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/Choose-User.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/Choose-User.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/Main-Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/Main-Menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/resources/StyleSheets/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/resources/StyleSheets/Button.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -286,7 +278,9 @@
       <workItem from="1573232111728" duration="372000" />
       <workItem from="1573326588506" duration="87000" />
       <workItem from="1574245739292" duration="2506000" />
-      <workItem from="1574249640827" duration="27839000" />
+      <workItem from="1574249640827" duration="28853000" />
+      <workItem from="1574351291557" duration="2977000" />
+      <workItem from="1574404875606" duration="521000" />
     </task>
     <task id="LOCAL-00001" summary="Main-Menu_Complete">
       <created>1572371543329</created>
@@ -393,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574268342042</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="User Serialization">
+      <created>1574283431707</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1574283431707</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +418,8 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Main-Menu_Complete" />
     <MESSAGE value="Changed Sunflower gif" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Sunflower gif" />
+    <MESSAGE value="User Serialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Serialization" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PvZ_Project$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1572634487032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -31,6 +31,7 @@ public class ChooseUserController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         NewUserPopup.setOpacity(0);
+        NewUserPopup.setDisable(true);
         RefreshBtns();
     }
 
@@ -50,11 +51,13 @@ public class ChooseUserController implements Initializable {
 
     public void OpenMainMenu(ActionEvent actionEvent) throws IOException {
         String s = ((Control) actionEvent.getSource()).getId();
-        System.out.println(s.charAt(3));
+        System.out.println(s);
+        Main.currentUser = Main.app.getUserlist().get(Integer.parseInt(s.substring(3))-1);
         Application_PvZ.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/Main-Menu.fxml");
     }
 
     public void CreateUserBtn(ActionEvent actionEvent) {
+
         if (Main.app.getUserlist().size()==6){
             //POPUP
             return;
