@@ -15,6 +15,11 @@ class Plants extends Character{
         COST = cost;
         COOLDOWNTIMER = cooldowntimer;
     }
+
+    void ResizeImage(){
+        img.setFitWidth(Main.PlantImageWidth);
+        img.setFitHeight(Main.PlantImageHeight);
+    }
 }
 
 class PeaShooter extends Plants implements Attacker{
@@ -24,20 +29,14 @@ class PeaShooter extends Plants implements Attacker{
         super(50,50);
         System.out.println("Planting Peashooter");
         PresentTile = new Pair<Integer, Integer>(x,y);
-        try{
-            FileInputStream input = new FileInputStream("src/PvZ/resources/img/PeaShooter.gif");
-            Image i = new Image(input);
-            this.img = new ImageView(i);
-            Summon(x,y);
-        }
-        catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
+        this.img = new ImageView(Main.PeaShooterImage);
+        ResizeImage();
+        Summon(x,y);
     }
 
     public void Launch(){
-        Projectile p = new Pea(Application_PvZ.ORIGIN_X+(PresentTile.getKey()* Application_PvZ.X)+78
-                , Application_PvZ.ORIGIN_Y+(PresentTile.getValue()* Application_PvZ.Y)+25,garden);
+        Projectile p = new Pea(Main.ORIGIN_X+(PresentTile.getKey()* Main.X)+78
+                , Main.ORIGIN_Y+(PresentTile.getValue()* Main.Y)+25,garden);
     }
 
     @Override
@@ -51,15 +50,9 @@ class Sunflower extends Plants{
         super(50,50);
         System.out.println("Planting Sunflower");
         PresentTile = new Pair<Integer, Integer>(x,y);
-        try{
-            FileInputStream input = new FileInputStream("src/PvZ/resources/img/Sunflower.gif");
-            Image i = new Image(input);
-            img = new ImageView(i);
-            Summon(x,y);
-        }
-        catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
+        img = new ImageView(Main.SunFlowerImage);
+        ResizeImage();
+        Summon(x,y);
     }
 }
 
@@ -68,14 +61,9 @@ class Cherrybomb extends Plants implements Attacker {
         super(50, 50);
         System.out.println("planting Cherrybomb");
         PresentTile = new Pair<Integer, Integer>(x, y);
-        try {
-            FileInputStream input = new FileInputStream("src/PvZ/resources/img/Zombie1.png");
-            Image i = new Image(input);
-            img = new ImageView(i);
-            Summon(x, y);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        img = new ImageView(Main.CherryBombImage);
+        ResizeImage();
+        Summon(x, y);
     }
 
     @Override
@@ -94,15 +82,9 @@ class Potatomine extends Plants implements Attacker{
         super(50,50);
         System.out.println("planting potatomine");
         PresentTile = new Pair<Integer, Integer>(x,y);
-        try{
-            FileInputStream input = new FileInputStream("src/PvZ/resources/img/Potatomine.gif");
-            Image i = new Image(input);
-            img = new ImageView(i);
-            Summon(x,y);
-        }
-        catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
+        img = new ImageView(Main.PotatoMineImage);
+        ResizeImage();
+        Summon(x,y);
     }
 
     @Override
@@ -116,15 +98,9 @@ class Walnut extends Plants{
         super(50,50);
         System.out.println("planting Walnut");
         PresentTile = new Pair<Integer, Integer>(x,y);
-        try{
-            FileInputStream input = new FileInputStream("src/PvZ/resources/img/Wall-nut1.png");
-            Image i = new Image(input);
-            img = new ImageView(i);
-            Summon(x,y);
-        }
-        catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
+        img = new ImageView(Main.WallNutImage);
+        ResizeImage();
+        Summon(x,y);
     }
 }
 

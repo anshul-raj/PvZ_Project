@@ -1,18 +1,27 @@
 package PvZ;
 
+import com.sun.org.glassfish.external.amx.AMX;
 import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
+import javafx.scene.ImageCursor;
 import javafx.scene.Node;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.input.*;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import javafx.event.ActionEvent;
+import javafx.util.Pair;
 
+import javax.crypto.spec.PSource;
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Time;
 import java.util.*;
 
 public class Controller implements Initializable {
@@ -36,9 +45,14 @@ public class Controller implements Initializable {
     public ImageView TestSun;
     public ImageView TestZombie;
     public Text SunsCollected;
+    public GridPane GardenGrid;
     //--------------//
     int k = 0;
     int p = 0;
+    //--------------//
+    int EstPlantX = -1;
+    int EstPlantY = -1;
+    ImageView HoverImage;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -69,13 +83,12 @@ public class Controller implements Initializable {
                       new KeyFrame(Duration.seconds(8),new KeyValue(TestZombie.layoutXProperty(),200)));
 
         t4.setCycleCount(Timeline.INDEFINITE);
-
-        SequentialTransition s = new SequentialTransition(t1,t2,t3,t4);
-        TestZombie.setOpacity(0);
+//
+//        SequentialTransition s = new SequentialTransition(t1,t2,t3,t4);
+//        TestZombie.setOpacity(0);
 //        testing
-//        SequentialTransition s = new SequentialTransition(t3);
+        SequentialTransition s = new SequentialTransition(t3);
         s.play();
-
     }
 
     @FXML
@@ -142,5 +155,95 @@ public class Controller implements Initializable {
 
     public void UpdateSuns(){
         SunsCollected.setText(Integer.toString(Main.currentGame.getSunsCollected()));
+    }
+
+    public void PlantSelected(MouseEvent mouseEvent) {
+        String s = ((Node) mouseEvent.getSource()).getId();
+        if (s.equals("SunflowerCard")){
+            BasePane.setCursor(new ImageCursor(Main.SunFlowerImage));
+        }
+        else if (s.equals("PeashooterCard")){
+            BasePane.setCursor(new ImageCursor(Main.PeaShooterImage));
+        }
+        else if (s.equals("CherrybombCard")){
+            BasePane.setCursor(new ImageCursor(Main.CherryBombImage));
+        }
+        else if (s.equals("PotatomineCard")){
+            BasePane.setCursor(new ImageCursor(Main.PotatoMineImage));
+        }
+        else if (s.equals("WallnutCard")){
+            BasePane.setCursor(new ImageCursor(Main.WallNutImage));
+        }
+    }
+
+    public void SelectLocation(MouseEvent mouseDragEvent) {
+        System.out.println("Mouse Drag Over");
+    }
+
+    public void PlantPlaced(MouseEvent mouseEvent) {
+        Node n = (Node) mouseEvent.getSource();
+        double x_ = mouseEvent.getX();
+        double y_ = mouseEvent.getY();
+        if (x_>255 && x_<(255+1112) && y_>94 && y_<(94+714)){
+            System.out.println("Inside Garden");
+        }
+        BasePane.setCursor(Cursor.DEFAULT);
+    }
+
+    @FXML
+    public void HandleDragDetection(MouseEvent mouseEvent) {
+//        Node source = (Node) mouseEvent.getSource();
+//        Dragboard db = source.startDragAndDrop(TransferMode.ANY);
+//        ClipboardContent cb = new ClipboardContent();
+//        cb.putString("PeaShooter Incoming");
+//        db.setContent(cb);
+    }
+
+    @FXML
+    public void HandleDragOver(DragEvent dragEvent) {
+//        if (dragEvent.getDragboard().hasString()){
+//            dragEvent.acceptTransferModes(TransferMode.ANY);
+//        }
+    }
+
+    @FXML
+    public void HandleDataDropped(DragEvent dragEvent) {
+//        String i = dragEvent.getDragboard().getString();
+//        System.out.println(i);
+//        System.out.println("Information Accepted");
+    }
+
+    public void ShowExpectedLocation(MouseEvent mouseEvent) {
+        if (Application_PvZ.SelectedPlant!=""){
+            double x_ = mouseEvent.getX()-Main.ORIGIN_X;
+            double y_ = mouseEvent.getY()-Main.ORIGIN_Y;
+//            System.out.println(x_+","+y_);
+//            EstPlantX = (int) x_/Main.PlantImageWidth;
+//            EstPlantY = (int) y_/Main.PlantImageHeight;
+            System.out.println(EstPlantX+","+EstPlantY);
+            if ((int) x_/Main.X != EstPlantX || (int) y_/ Main.Y != EstPlantY){
+                EstPlantX = (int) x_/Main.PlantImageWidth;
+                EstPlantY = (int) y_/Main.PlantImageHeight;
+                if (EstPlantX<0 || EstPlantY<0){return;}
+                if (EstPlantX>8){ EstPlantX = 8; }
+                if (EstPlantY>4){ EstPlantY = 4; }
+                System.out.println(x_+","+y_);
+                System.out.println(EstPlantX+","+EstPlantY);
+                ImageView temp_i = new ImageView(Main.PeaShooterImage);
+                temp_i.setFitHeight(Main.PlantImageHeight);
+                temp_i.setFitWidth(Main.PlantImageWidth);
+                temp_i.setOpacity(0.7);
+                garden.getChildren().remove(HoverImage);
+                garden.getChildren().add(temp_i);
+                temp_i.relocate(Main.ORIGIN_X+(EstPlantX* Main.X), Main.ORIGIN_Y+(EstPlantY* Main.Y));
+                HoverImage = temp_i;
+            }
+        }
+        else {
+            if (HoverImage!=null){
+                garden.getChildren().remove(HoverImage);
+                HoverImage = null;
+            }
+        }
     }
 }

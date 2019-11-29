@@ -9,6 +9,7 @@ public class Game implements Serializable {
      private final Level PresentLevel;
      private final ArrayList<LawnMovers> LawnMoversActive = new ArrayList<>();
      private final ArrayList<Sun> UncollectedSun = new ArrayList<>();
+     public String PlantSelected = null;
 
     public Game(int lvl) {
         PresentLevel = new Level(lvl);

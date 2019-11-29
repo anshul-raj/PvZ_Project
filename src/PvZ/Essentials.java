@@ -45,9 +45,9 @@ class Sun {
     }
 
     public void Summon(int x, int y){
-        Sunimg.setFitHeight(Application_PvZ.ImageHeight);
-        Sunimg.setFitWidth(Application_PvZ.ImageWidth);
-        Sunimg.relocate(Application_PvZ.ORIGIN_X+(x* Application_PvZ.X), Application_PvZ.ORIGIN_Y+(y* Application_PvZ.Y));
+        Sunimg.setFitHeight(Main.PlantImageHeight);
+        Sunimg.setFitWidth(Main.PlantImageWidth);
+        Sunimg.relocate(Main.ORIGIN_X+(x* Main.X), Main.ORIGIN_Y+(y* Main.Y));
         Character.garden.getChildren().add(Sunimg);
     }
 }
