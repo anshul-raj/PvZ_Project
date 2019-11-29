@@ -6,8 +6,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Essentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Essentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Plants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Plants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/PvZ_Layout_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/PvZ_Layout_2.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,6 +79,17 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
@@ -287,7 +298,7 @@
       <workItem from="1574404875606" duration="614000" />
       <workItem from="1574773053540" duration="136000" />
       <workItem from="1574950448896" duration="22780000" />
-      <workItem from="1575033481690" duration="350000" />
+      <workItem from="1575033481690" duration="7657000" />
     </task>
     <task id="LOCAL-00001" summary="Main-Menu_Complete">
       <created>1572371543329</created>
@@ -415,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574994622697</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="User Serialization">
+      <created>1575033907306</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575033907306</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

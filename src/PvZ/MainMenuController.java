@@ -46,7 +46,7 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void StartGame(ActionEvent actionEvent) throws IOException {
-        Application_PvZ.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/PvZ_Layout.fxml");
+        Application_PvZ.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/PvZ_Layout_2.fxml");
     }
 
     @FXML

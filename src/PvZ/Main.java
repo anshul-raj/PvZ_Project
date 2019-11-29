@@ -71,7 +71,7 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception{
 //        Parent ChooseUserScene = app.ChooseUserScene.load();
-        Parent ChooseUserScene = app.GameScene.load();
+        Parent ChooseUserScene = app.ChooseUserScene.load();
         primaryStage.setScene(new Scene(ChooseUserScene));
         primaryStage.show();
         ChooseUserScene.requestFocus();
@@ -95,7 +95,7 @@ class Application_PvZ{
     public FXMLLoader ChooseLevelScene = new FXMLLoader(getClass().getResource("resources/FxmlFiles/Levels.fxml"));
     public FXMLLoader GameScene = new FXMLLoader(getClass().getResource("resources/FxmlFiles/PvZ_Layout_2.fxml"));
     //------------------------------------------------------
-    static public String SelectedPlant = null; // This Will Change Eventually -> Game
+    static public String SelectedPlant = ""; // This Will Change Eventually -> Game
 
     public Application_PvZ() throws IOException {
         chooseUserController = (ChooseUserController) ChooseUserScene.getController();

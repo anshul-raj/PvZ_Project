@@ -19,8 +19,7 @@ public class Character implements Serializable {
     }
 
     public void Summon(int x,int y) {
-        img.setFitHeight(Main.PlantImageHeight);
-        img.setFitWidth(Main.PlantImageWidth);
+        System.out.println(gardenGrid);
         gardenGrid.add(img,x,y);
     }
 

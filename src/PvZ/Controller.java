@@ -1,27 +1,24 @@
 package PvZ;
 
-import com.sun.org.glassfish.external.amx.AMX;
+import com.sun.xml.internal.ws.message.MimeAttachmentSet;
 import javafx.animation.*;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.ImageCursor;
 import javafx.scene.Node;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import javafx.event.ActionEvent;
-import javafx.util.Pair;
-
-import javax.crypto.spec.PSource;
-import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Time;
 import java.util.*;
 
 public class Controller implements Initializable {
@@ -59,9 +56,7 @@ public class Controller implements Initializable {
         PausePane.setDisable(true);
         PausePane.setOpacity(0);
 
-
         Character.gardenGrid = GardenGrid;
-
         LeftPanel.setOpacity(0);
 
         KeyValue disappear = new KeyValue(garden.opacityProperty(), 0, Interpolator.EASE_OUT);
@@ -99,40 +94,30 @@ public class Controller implements Initializable {
     @FXML
     public void PlantChooser(MouseEvent mouseEvent) throws IOException {
 
-        System.out.println(mouseEvent.getSource().toString());
-
-        if (k > 4) {
-            k = 0;
-            p++;
-        }
         String name = ((Node) mouseEvent.getSource()).getId();
-        if (p<9){
-            switch (name) {
-                case "SunflowerCard": {
-                    Plants plant = new Sunflower(p, k++);
-                    break;
-                }
-                case "PeashooterCard": {
-                    Plants plant = new PeaShooter(p, k++);
-                    break;
-                }
-                case "CherrybombCard": {
-                    Plants plant = new Cherrybomb(p, k++);
-                    break;
-                }
-                case "PotatomineCard": {
-                    Plants plant = new Potatomine(p, k++);
-                    break;
-                }
-                case "WallnutCard": {
-                    Plants plant = new Walnut(p, k++);
-                    break;
-                }
-                default:
-                    System.out.println("ERROR---------------------");
-                    break;
+        switch (name) {
+            case "SunflowerCard": {
+                BasePane.setCursor(new ImageCursor(Main.SunFlowerImage));
+                break;
+            }
+            case "PeashooterCard": {
+                BasePane.setCursor(new ImageCursor(Main.PeaShooterImage));
+                break;
+            }
+            case "CherrybombCard": {
+                BasePane.setCursor(new ImageCursor(Main.CherryBombImage));
+                break;
+            }
+            case "PotatomineCard": {
+                BasePane.setCursor(new ImageCursor(Main.PotatoMineImage));
+                break;
+            }
+            case "WallnutCard": {
+                BasePane.setCursor(new ImageCursor(Main.WallNutImage));
+                break;
             }
         }
+        Application_PvZ.SelectedPlant = name;
     }
 
     public void ResumeGame(MouseEvent actionEvent){
@@ -157,37 +142,39 @@ public class Controller implements Initializable {
         SunsCollected.setText(Integer.toString(Main.currentGame.getSunsCollected()));
     }
 
-    public void PlantSelected(MouseEvent mouseEvent) {
-        String s = ((Node) mouseEvent.getSource()).getId();
-        if (s.equals("SunflowerCard")){
-            BasePane.setCursor(new ImageCursor(Main.SunFlowerImage));
-        }
-        else if (s.equals("PeashooterCard")){
-            BasePane.setCursor(new ImageCursor(Main.PeaShooterImage));
-        }
-        else if (s.equals("CherrybombCard")){
-            BasePane.setCursor(new ImageCursor(Main.CherryBombImage));
-        }
-        else if (s.equals("PotatomineCard")){
-            BasePane.setCursor(new ImageCursor(Main.PotatoMineImage));
-        }
-        else if (s.equals("WallnutCard")){
-            BasePane.setCursor(new ImageCursor(Main.WallNutImage));
-        }
-    }
-
     public void SelectLocation(MouseEvent mouseDragEvent) {
         System.out.println("Mouse Drag Over");
     }
 
     public void PlantPlaced(MouseEvent mouseEvent) {
-        Node n = (Node) mouseEvent.getSource();
-        double x_ = mouseEvent.getX();
-        double y_ = mouseEvent.getY();
-        if (x_>255 && x_<(255+1112) && y_>94 && y_<(94+714)){
-            System.out.println("Inside Garden");
+        String name = Application_PvZ.SelectedPlant;
+        switch (name) {
+            case "SunflowerCard": {
+                Plants plant = new Sunflower(EstPlantX,EstPlantY);
+                break;
+            }
+            case "PeashooterCard": {
+                Plants plant = new PeaShooter(EstPlantX,EstPlantY);
+                break;
+            }
+            case "CherrybombCard": {
+                Plants plant = new Cherrybomb(EstPlantX,EstPlantY);
+                break;
+            }
+            case "PotatomineCard": {
+                Plants plant = new Potatomine(EstPlantX,EstPlantY);
+                break;
+            }
+            case "WallnutCard": {
+                Plants plant = new Walnut(EstPlantX,EstPlantY);
+                break;
+            }
+            default:
+                System.out.println("Plant Placed");
+                break;
         }
         BasePane.setCursor(Cursor.DEFAULT);
+        Application_PvZ.SelectedPlant = "";
     }
 
     @FXML
@@ -214,40 +201,62 @@ public class Controller implements Initializable {
     }
 
     public void ShowExpectedLocation(MouseEvent mouseEvent) {
-        Node n =(Node) mouseEvent.getSource();
-        Integer x = GridPane.getColumnIndex(n);
-        Integer y = GridPane.getRowIndex(n);
-//        ImageView temp_i = new ImageView(Main.PeaShooterImage);
-//        temp_i.setFitHeight(Main.PlantImageHeight);
-//        temp_i.setFitWidth(Main.PlantImageWidth);
-//        temp_i.setOpacity(0.7);
-//        if (HoverImage!=null){
-//            GardenGrid.getChildren().remove(HoverImage);
-//        }
-//        GardenGrid.add(temp_i,x,y);
-//        HoverImage = temp_i;
-        if (Application_PvZ.SelectedPlant!=""){
+        int CurrentLocationX = (int) mouseEvent.getX();
+        int CurrentLocationY = (int) mouseEvent.getY();
+        ObservableList<ColumnConstraints> cc = GardenGrid.getColumnConstraints();
+        ObservableList<RowConstraints> rc = GardenGrid.getRowConstraints();
+        int x = 0;
+        int y = 0;
+        for (ColumnConstraints k : cc){
+            CurrentLocationX -= k.getPrefWidth();
+            if (CurrentLocationX>0){x++;}
+            else {break;}
+        }
+        for (RowConstraints k : rc){
+            CurrentLocationY -= k.getPrefHeight();
+            if (CurrentLocationY>0){y++;}
+            else {break;}
+        }
+
+        if (!Application_PvZ.SelectedPlant.equals("")){
             if ( x != EstPlantX || y != EstPlantY){
                 EstPlantX = x;
                 EstPlantY = y;
                 if (EstPlantX<0 || EstPlantY<0){return;}
                 if (EstPlantX>8){ EstPlantX = 8; }
                 if (EstPlantY>4){ EstPlantY = 4; }
-                System.out.println(x+","+y);
-                System.out.println(EstPlantX+","+EstPlantY);
-                ImageView temp_i = new ImageView(Main.PeaShooterImage);
+                ImageView temp_i;
+                switch (Application_PvZ.SelectedPlant){
+                    case ("PeashooterCard"):
+                        temp_i = new ImageView(Main.PeaShooterImage);
+                        break;
+                    case ("SunflowerCard"):
+                        temp_i = new ImageView(Main.SunFlowerImage);
+                        break;
+                    case ("PotatomineCard"):
+                        temp_i = new ImageView(Main.PotatoMineImage);
+                        break;
+                    case ("CherrybombCard"):
+                        temp_i = new ImageView(Main.CherryBombImage);
+                        break;
+                    case ("WallnutCard"):
+                        temp_i = new ImageView(Main.WallNutImage);
+                        break;
+                    default:
+                        temp_i = new ImageView();
+                        System.out.println("New Image");
+                }
                 temp_i.setFitHeight(Main.PlantImageHeight);
                 temp_i.setFitWidth(Main.PlantImageWidth);
                 temp_i.setOpacity(0.7);
                 GardenGrid.getChildren().remove(HoverImage);
                 GardenGrid.add(temp_i,EstPlantX,EstPlantY);
-                temp_i.relocate(Main.ORIGIN_X+(EstPlantX* Main.X), Main.ORIGIN_Y+(EstPlantY* Main.Y));
                 HoverImage = temp_i;
             }
         }
         else {
             if (HoverImage!=null){
-                garden.getChildren().remove(HoverImage);
+                GardenGrid.getChildren().remove(HoverImage);
                 HoverImage = null;
             }
         }
