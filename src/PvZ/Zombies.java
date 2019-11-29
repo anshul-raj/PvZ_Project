@@ -23,12 +23,12 @@ class Normie extends Zombies{
 
 class ConeTop extends Zombies{
     public ConeTop() {
-        super(5, 5);
+        super(6, 6);
     }
 }
 
 class GangLeader extends Zombies{
     public GangLeader() {
-        super(5, 5);
+        super(7, 7);
     }
 }
