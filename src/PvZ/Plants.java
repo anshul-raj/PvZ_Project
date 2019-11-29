@@ -1,11 +1,17 @@
 package PvZ;
 
-import javafx.scene.image.Image;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.image.ImageView;
+import javafx.util.Duration;
 import javafx.util.Pair;
-import java.io.FileInputStream;
+
+import javax.naming.TimeLimitExceededException;
 import java.io.FileNotFoundException;
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 class Plants extends Character{
     protected final int COST;
@@ -53,6 +59,21 @@ class Sunflower extends Plants{
         img = new ImageView(Main.SunFlowerImage);
         ResizeImage();
         Summon(x,y);
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
+            ProduceSun();
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+
+    }
+
+    public void ProduceSun(){
+        try {
+            Sun s = new Sun(PresentTile.getKey(),PresentTile.getValue());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
 

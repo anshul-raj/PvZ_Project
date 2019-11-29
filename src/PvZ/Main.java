@@ -102,7 +102,6 @@ class Application_PvZ{
         mainMenuController = (MainMenuController) MainMenuScene.getController();
         levelsController = (LevelsController) ChooseLevelScene.getController();
         gamecontroller = (Controller) GameScene.getController();
-
         //----------
         try{
             File folder = new File("db/");

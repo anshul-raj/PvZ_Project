@@ -39,16 +39,16 @@ class Sun {
         Timeline t1 = new Timeline(new KeyFrame(Duration.seconds(0.2),new KeyValue(Sunimg.opacityProperty(),0),
                                                                       new KeyValue(Sunimg.disableProperty(),true)));
 
-        t1.setDelay(Duration.seconds(10));
+        t1.setDelay(Duration.seconds(5));
         t1.play();
         Disappear();
     }
 
-    public void Summon(int x, int y){
-        Sunimg.setFitHeight(Main.PlantImageHeight);
-        Sunimg.setFitWidth(Main.PlantImageWidth);
-        Sunimg.relocate(Main.ORIGIN_X+(x* Main.X), Main.ORIGIN_Y+(y* Main.Y));
-        Character.gardenGrid.getChildren().add(Sunimg);
+    private void Summon(int x, int y){
+        Sunimg.setFitHeight((double) Main.PlantImageHeight/2);
+        Sunimg.setFitWidth((double) Main.PlantImageWidth/2);
+        Sunimg.relocate(Main.ORIGIN_X+(x* Main.X)+ 5, Main.ORIGIN_Y+(y* Main.Y)+5);
+        Character.garden.getChildren().add(Sunimg);
     }
 }
 

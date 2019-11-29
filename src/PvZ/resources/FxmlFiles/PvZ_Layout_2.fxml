@@ -17,7 +17,7 @@
             <Image url="@../img/Background1.jpg" />
          </image>
       </ImageView>
-      <Pane fx:id="garden" focusTraversable="true" layoutX="255.0" layoutY="94.0" onDragDropped="#HandleDataDropped" onDragOver="#HandleDragOver" onMousePressed="#SelectLocation" prefHeight="714.0" prefWidth="1111.0">
+      <Pane fx:id="garden" focusTraversable="true" layoutX="255.0" layoutY="94.0" onMousePressed="#SelectLocation" prefHeight="714.0" prefWidth="1111.0">
          <children>
             <ImageView fx:id="LM1" fitHeight="86.0" fitWidth="99.0" layoutX="-3.0" layoutY="51.0" preserveRatio="true">
                <image>

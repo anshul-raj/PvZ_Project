@@ -57,6 +57,8 @@ public class Controller implements Initializable {
         PausePane.setOpacity(0);
 
         Character.gardenGrid = GardenGrid;
+        Character.garden = garden;
+
         LeftPanel.setOpacity(0);
 
         KeyValue disappear = new KeyValue(garden.opacityProperty(), 0, Interpolator.EASE_OUT);
@@ -148,6 +150,7 @@ public class Controller implements Initializable {
 
     public void PlantPlaced(MouseEvent mouseEvent) {
         String name = Application_PvZ.SelectedPlant;
+
         switch (name) {
             case "SunflowerCard": {
                 Plants plant = new Sunflower(EstPlantX,EstPlantY);
@@ -175,29 +178,6 @@ public class Controller implements Initializable {
         }
         BasePane.setCursor(Cursor.DEFAULT);
         Application_PvZ.SelectedPlant = "";
-    }
-
-    @FXML
-    public void HandleDragDetection(MouseEvent mouseEvent) {
-//        Node source = (Node) mouseEvent.getSource();
-//        Dragboard db = source.startDragAndDrop(TransferMode.ANY);
-//        ClipboardContent cb = new ClipboardContent();
-//        cb.putString("PeaShooter Incoming");
-//        db.setContent(cb);
-    }
-
-    @FXML
-    public void HandleDragOver(DragEvent dragEvent) {
-//        if (dragEvent.getDragboard().hasString()){
-//            dragEvent.acceptTransferModes(TransferMode.ANY);
-//        }
-    }
-
-    @FXML
-    public void HandleDataDropped(DragEvent dragEvent) {
-//        String i = dragEvent.getDragboard().getString();
-//        System.out.println(i);
-//        System.out.println("Information Accepted");
     }
 
     public void ShowExpectedLocation(MouseEvent mouseEvent) {

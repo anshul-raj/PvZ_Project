@@ -1,5 +1,6 @@
 package PvZ;
 
+import javafx.scene.control.SplitPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -11,6 +12,7 @@ public class Character implements Serializable {
     protected int Health;
     protected Pair<Integer,Integer> PresentTile;
     protected static GridPane gardenGrid;
+    protected static Pane garden;
     protected ImageView img;
 
     public void TakeDamage(int damage){

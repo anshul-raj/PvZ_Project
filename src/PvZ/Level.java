@@ -12,11 +12,34 @@ public class Level implements Serializable {
     private final int NumberOfActivePlants;
 
     public Level(int lvl) {
-        if (lvl==1){
+        if (lvl == 1 || lvl == 2 || lvl == 3){
             NumberOfActivePlants = 3;
         }
-        else {
+        else{
             NumberOfActivePlants = 5;
         }
+        ZombieCreator(lvl);
+    }
+
+    private void ZombieCreator(int lvl){
+        while(ZombiesList.size()<(20*lvl)){
+            if(ZombiesList.size()<10*lvl){
+                ZombiesList.add(new Normie());
+            }
+            else if(ZombiesList.size()<15*lvl){
+                ZombiesList.add(new ConeTop());
+            }
+            else{
+                ZombiesList.add(new GangLeader());
+            }
+        }
+    }
+
+    public ArrayList<Zombies> getZombiesList() {
+        return ZombiesList;
+    }
+
+    public void setZombiesList(ArrayList<Zombies> zombiesList) {
+        ZombiesList = zombiesList;
     }
 }
