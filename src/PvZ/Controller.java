@@ -60,7 +60,7 @@ public class Controller implements Initializable {
         PausePane.setOpacity(0);
 
 
-        Character.garden = garden;
+        Character.gardenGrid = GardenGrid;
 
         LeftPanel.setOpacity(0);
 
@@ -214,27 +214,33 @@ public class Controller implements Initializable {
     }
 
     public void ShowExpectedLocation(MouseEvent mouseEvent) {
+        Node n =(Node) mouseEvent.getSource();
+        Integer x = GridPane.getColumnIndex(n);
+        Integer y = GridPane.getRowIndex(n);
+//        ImageView temp_i = new ImageView(Main.PeaShooterImage);
+//        temp_i.setFitHeight(Main.PlantImageHeight);
+//        temp_i.setFitWidth(Main.PlantImageWidth);
+//        temp_i.setOpacity(0.7);
+//        if (HoverImage!=null){
+//            GardenGrid.getChildren().remove(HoverImage);
+//        }
+//        GardenGrid.add(temp_i,x,y);
+//        HoverImage = temp_i;
         if (Application_PvZ.SelectedPlant!=""){
-            double x_ = mouseEvent.getX()-Main.ORIGIN_X;
-            double y_ = mouseEvent.getY()-Main.ORIGIN_Y;
-//            System.out.println(x_+","+y_);
-//            EstPlantX = (int) x_/Main.PlantImageWidth;
-//            EstPlantY = (int) y_/Main.PlantImageHeight;
-            System.out.println(EstPlantX+","+EstPlantY);
-            if ((int) x_/Main.X != EstPlantX || (int) y_/ Main.Y != EstPlantY){
-                EstPlantX = (int) x_/Main.PlantImageWidth;
-                EstPlantY = (int) y_/Main.PlantImageHeight;
+            if ( x != EstPlantX || y != EstPlantY){
+                EstPlantX = x;
+                EstPlantY = y;
                 if (EstPlantX<0 || EstPlantY<0){return;}
                 if (EstPlantX>8){ EstPlantX = 8; }
                 if (EstPlantY>4){ EstPlantY = 4; }
-                System.out.println(x_+","+y_);
+                System.out.println(x+","+y);
                 System.out.println(EstPlantX+","+EstPlantY);
                 ImageView temp_i = new ImageView(Main.PeaShooterImage);
                 temp_i.setFitHeight(Main.PlantImageHeight);
                 temp_i.setFitWidth(Main.PlantImageWidth);
                 temp_i.setOpacity(0.7);
-                garden.getChildren().remove(HoverImage);
-                garden.getChildren().add(temp_i);
+                GardenGrid.getChildren().remove(HoverImage);
+                GardenGrid.add(temp_i,EstPlantX,EstPlantY);
                 temp_i.relocate(Main.ORIGIN_X+(EstPlantX* Main.X), Main.ORIGIN_Y+(EstPlantY* Main.Y));
                 HoverImage = temp_i;
             }

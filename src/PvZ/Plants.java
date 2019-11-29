@@ -36,7 +36,7 @@ class PeaShooter extends Plants implements Attacker{
 
     public void Launch(){
         Projectile p = new Pea(Main.ORIGIN_X+(PresentTile.getKey()* Main.X)+78
-                , Main.ORIGIN_Y+(PresentTile.getValue()* Main.Y)+25,garden);
+                , Main.ORIGIN_Y+(PresentTile.getValue()* Main.Y)+25,gardenGrid);
     }
 
     @Override

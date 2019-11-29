@@ -32,7 +32,7 @@ class Sun {
     }
 
     private void Disappear(){
-        Character.garden.getChildren().remove(Sunimg);
+        Character.gardenGrid.getChildren().remove(Sunimg);
     }
 
     private void timeline(){
@@ -48,7 +48,7 @@ class Sun {
         Sunimg.setFitHeight(Main.PlantImageHeight);
         Sunimg.setFitWidth(Main.PlantImageWidth);
         Sunimg.relocate(Main.ORIGIN_X+(x* Main.X), Main.ORIGIN_Y+(y* Main.Y));
-        Character.garden.getChildren().add(Sunimg);
+        Character.gardenGrid.getChildren().add(Sunimg);
     }
 }
 
