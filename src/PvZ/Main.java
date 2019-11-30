@@ -48,6 +48,8 @@ public class Main extends Application{
     public static final int PlantImageHeight = 111;
     public static final int ZombieImageWidth = 107;
     public static final int ZombieImageHeight = 170;
+    public static final int sunImagewidth = (int) ((int) Main.PlantImageWidth/1.5);
+    public static final int sunImageHeight = (int) ((int) Main.PlantImageHeight/1.5);
     //------------------------------------------------------
 
 
@@ -59,6 +61,7 @@ public class Main extends Application{
             WallNutImage = new Image(new FileInputStream("src/PvZ/resources/img/Wall-nut1.png"));
             PotatoMineImage = new Image(new FileInputStream("src/PvZ/resources/img/Potatomine.gif"));
             NormieImage = new Image(new FileInputStream("src/PvZ/resources/img/Zombie1.png"));
+            ConeTopImage = new Image(new FileInputStream("src/PvZ/resources/img/BucketheadZombie.gif"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -93,10 +96,10 @@ public class Main extends Application{
 class Application_PvZ{
     private ArrayList<User> userlist = new ArrayList<>();
     //-------------------------------------------------------
-    public ChooseUserController chooseUserController = null;
-    public MainMenuController mainMenuController = null;
-    public LevelsController levelsController = null;
-    public Controller gamecontroller = null;
+    transient public ChooseUserController chooseUserController = null;
+    transient public MainMenuController mainMenuController = null;
+    transient public LevelsController levelsController = null;
+    transient public Controller gamecontroller = null;
     //--------------------------------------------------------
     public FXMLLoader ChooseUserScene = new FXMLLoader(getClass().getResource("resources/FxmlFiles/Choose-User.fxml"));
     public FXMLLoader MainMenuScene = new FXMLLoader(getClass().getResource("resources/FxmlFiles/Main-Menu.fxml"));

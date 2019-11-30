@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class Controller implements Initializable {
+public class Controller implements Initializable{
 
     @FXML
     public ImageView background_image;

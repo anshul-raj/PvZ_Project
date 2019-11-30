@@ -1,15 +1,19 @@
 package PvZ;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.scene.Node;
+import javafx.util.Duration;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Serializable;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Game implements Serializable {
-     private final Plants[][] PlantsPlanted = new Plants[8][5];
+     private final Plants[][] PlantsPlanted = new Plants[9][5];
      private int SunsCollected = 0;
      private final Level PresentLevel;
      private final ArrayList<LawnMovers> LawnMoversActive = new ArrayList<>();
@@ -46,18 +50,18 @@ public class Game implements Serializable {
     }
 
     private void SunGenerator() {
-        if (PresentLevel.getZombiesList().size() > 0) {
+//        if (PresentLevel.getZombiesList().size() > 0) {
             Random r = new Random();
-            int width = 1111;
+            int width = 1000;
             int height = 714;
-            int location_X = r.nextInt(width) + Main.ORIGIN_X;
-            int location_Y = Main.ORIGIN_Y + height;
+            int location_X = 100 + r.nextInt(width-100);
+            int location_Y = height - 3*Main.ORIGIN_Y;
             try {
                 Sun s = new FallingSun(location_X, location_Y);
             } catch (FileNotFoundException e) {
                 System.out.println("Its night, no suns left!!");
             }
-        }
+//        }
     }
 
     public void load(Node n){
@@ -66,6 +70,12 @@ public class Game implements Serializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        SunGenerator();
+        Timeline t = new Timeline(new KeyFrame(Duration.seconds(1),e->{
+            SunGenerator();
+        }));
+        t.setCycleCount(Timeline.INDEFINITE);
+        t.play();
     }
 
     public void PlacePlant(Plants p){

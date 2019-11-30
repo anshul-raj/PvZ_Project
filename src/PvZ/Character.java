@@ -13,7 +13,7 @@ public class Character implements Serializable {
     protected Pair<Integer,Integer> PresentTile;
     protected static GridPane gardenGrid;
     protected static Pane garden;
-    protected ImageView img;
+    transient protected ImageView img;
 
     public void TakeDamage(int damage){
         this.Health-=damage;
