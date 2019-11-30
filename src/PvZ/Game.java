@@ -70,6 +70,7 @@ public class Game implements Serializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        PresentLevel.ZombieCreator();
         SunGenerator();
         Timeline t = new Timeline(new KeyFrame(Duration.seconds(1),e->{
             SunGenerator();

@@ -11,8 +11,10 @@ public class Level implements Serializable {
     private ArrayList[] ZombiesList = new ArrayList[5];
     private ImageView Prize;
     private final int NumberOfActivePlants;
+    private int ThisLevel;
 
     public Level(int lvl) {
+        ThisLevel = lvl;
         for (int i=0;i<5;i++){
             ZombiesList[i] = new ArrayList<Zombies>();
         }
@@ -30,7 +32,6 @@ public class Level implements Serializable {
             AvaialablePlants.add("CherryBomb");
             AvaialablePlants.add("PotatoMine");
         }
-        ZombieCreator(lvl);
     }
 
     public ArrayList<String> getAvaialablePlants() {
@@ -41,7 +42,8 @@ public class Level implements Serializable {
         AvaialablePlants = avaialablePlants;
     }
 
-    private void ZombieCreator(int lvl){
+    public void ZombieCreator(){
+        int lvl = ThisLevel;
         Random r = new Random();
         int temp = ZombiesList[0].size() + ZombiesList[1].size() + ZombiesList[2].size()+
                 ZombiesList[3].size() + ZombiesList[4].size();
