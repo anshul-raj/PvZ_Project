@@ -85,4 +85,6 @@ public class Game implements Serializable {
     public void RemovePlant(Plants p){
         this.PlantsPlanted[p.PresentTile.getKey()][p.PresentTile.getValue()] = null;
     }
+
+    public void RemoveZombie(Zombies z){}
 }

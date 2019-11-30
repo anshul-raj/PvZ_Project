@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="User Serialization">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Essentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Essentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/resources/img/CherryBomb.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/resources/img/CherryBomb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/resources/img/Level4Zombie.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/Plants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Plants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/Zombies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Zombies.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="209" />
@@ -94,6 +96,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1SQtE2EDufIvA9yQl0a7ATTDFhh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -300,6 +305,7 @@
       <workItem from="1574773053540" duration="136000" />
       <workItem from="1574950448896" duration="22780000" />
       <workItem from="1575033481690" duration="36262000" />
+      <workItem from="1575111048030" duration="5488000" />
     </task>
     <task id="LOCAL-00001" summary="Main-Menu_Complete">
       <created>1572371543329</created>

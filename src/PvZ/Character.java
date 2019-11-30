@@ -8,7 +8,7 @@ import javafx.util.Pair;
 import java.io.FileNotFoundException;
 import java.io.Serializable;
 
-public class Character implements Serializable {
+public abstract class Character implements Serializable {
     protected int Health;
     protected Pair<Integer,Integer> PresentTile;
     protected static GridPane gardenGrid;
