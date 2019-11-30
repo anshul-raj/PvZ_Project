@@ -36,6 +36,9 @@ public class Main extends Application{
     static Image CherryBombImage;
     static Image WallNutImage;
     static Image PotatoMineImage;
+    static Image NormieImage;
+    static Image GangleaderImage;
+    static Image ConeTopImage;
     //------------------------------------------------------
     public static final int ORIGIN_X = 90;
     public static final int ORIGIN_Y = 24;
@@ -43,15 +46,19 @@ public class Main extends Application{
     public static final int Y = 135;
     public static final int PlantImageWidth = 116;
     public static final int PlantImageHeight = 111;
+    public static final int ZombieImageWidth = 107;
+    public static final int ZombieImageHeight = 170;
+    //------------------------------------------------------
 
 
     static {
         try {
             PeaShooterImage = new Image(new FileInputStream("src/PvZ/resources/img/PeaShooter.gif"));
             SunFlowerImage = new Image(new FileInputStream("src/PvZ/resources/img/Sunflower.gif"));
-            CherryBombImage = new Image(new FileInputStream("src/PvZ/resources/img/Zombie1.png"));
+            CherryBombImage = new Image(new FileInputStream("src/PvZ/resources/img/CherryBomb.png"));
             WallNutImage = new Image(new FileInputStream("src/PvZ/resources/img/Wall-nut1.png"));
             PotatoMineImage = new Image(new FileInputStream("src/PvZ/resources/img/Potatomine.gif"));
+            NormieImage = new Image(new FileInputStream("src/PvZ/resources/img/Zombie1.png"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

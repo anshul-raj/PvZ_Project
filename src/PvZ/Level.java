@@ -6,7 +6,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Level implements Serializable {
-    private ArrayList<Plants> AvaialablePlants = new ArrayList<>();
+    private ArrayList<String> AvaialablePlants = new ArrayList<>();
     private ArrayList<Zombies> ZombiesList = new ArrayList<>();
     private ImageView Prize;
     private final int NumberOfActivePlants;
@@ -14,9 +14,17 @@ public class Level implements Serializable {
     public Level(int lvl) {
         if (lvl == 1 || lvl == 2 || lvl == 3){
             NumberOfActivePlants = 3;
+            AvaialablePlants.add("PeaShooter");
+            AvaialablePlants.add("Sunflower");
+            AvaialablePlants.add("WallNut");
         }
         else{
             NumberOfActivePlants = 5;
+            AvaialablePlants.add("PeaShooter");
+            AvaialablePlants.add("Sunflower");
+            AvaialablePlants.add("WallNut");
+            AvaialablePlants.add("CherryBomb");
+            AvaialablePlants.add("PotatoMine");
         }
         ZombieCreator(lvl);
     }

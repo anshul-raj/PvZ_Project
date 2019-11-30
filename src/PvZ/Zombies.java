@@ -1,5 +1,11 @@
 package PvZ;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class Zombies extends Character implements Attacker{
     protected final double MOVEMENTSPEED;
     protected final int DAMAGE;
@@ -18,17 +24,20 @@ public class Zombies extends Character implements Attacker{
 class Normie extends Zombies{
     public Normie() {
         super(5, 5);
+        img = new ImageView(Main.NormieImage);
     }
 }
 
 class ConeTop extends Zombies{
     public ConeTop() {
-        super(6, 6);
+        super(7, 7);
+        img = new ImageView(Main.NormieImage);
     }
 }
 
 class GangLeader extends Zombies{
     public GangLeader() {
         super(7, 7);
+        img = new ImageView(Main.NormieImage);
     }
 }
