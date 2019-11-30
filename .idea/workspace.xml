@@ -5,12 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PvZ_Project/PvZ/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/ChooseUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/ChooseUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Essentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Essentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PvZ/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/LevelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/LevelsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/MainMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/Plants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/Plants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PvZ/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/PvZ_Layout_2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PvZ/resources/FxmlFiles/PvZ_Layout_2.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -301,7 +304,7 @@
       <workItem from="1574404875606" duration="614000" />
       <workItem from="1574773053540" duration="136000" />
       <workItem from="1574950448896" duration="22780000" />
-      <workItem from="1575033481690" duration="16936000" />
+      <workItem from="1575033481690" duration="28708000" />
     </task>
     <task id="LOCAL-00001" summary="Main-Menu_Complete">
       <created>1572371543329</created>
@@ -443,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575043055624</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="User Serialization">
+      <created>1575054254902</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1575054254902</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

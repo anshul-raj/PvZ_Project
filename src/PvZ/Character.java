@@ -20,12 +20,12 @@ public class Character implements Serializable {
         if (Health<=0){this.remove();}
     }
 
-    public void Summon(int x,int y) {
+    void Summon(int x, int y) {
         System.out.println(gardenGrid);
         gardenGrid.add(img,x,y);
     }
 
-    private void remove(){
+    protected void remove(){
         gardenGrid.getChildren().remove(this.img);
     }
 }

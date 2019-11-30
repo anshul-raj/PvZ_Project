@@ -142,7 +142,7 @@
                <Image url="@../img/SunCollectedDisplay.png" />
             </image>
          </ImageView>
-            <Text fx:id="SunsCollected" layoutX="224.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" textAlignment="CENTER" wrappingWidth="143.2704657316208">
+            <Text fx:id="SunsCollected" layoutX="224.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="143.2704657316208">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>
@@ -164,9 +164,9 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="PausePane" disable="true" layoutX="700.0" layoutY="374.0" opacity="0.0" prefHeight="145.0" prefWidth="143.0">
+      <Pane fx:id="PausePane" layoutX="700.0" layoutY="374.0" prefHeight="145.0" prefWidth="143.0">
          <children>
-            <ImageView accessibleRole="BUTTON" disable="true" fitHeight="549.0" fitWidth="661.0" layoutX="-202.0" layoutY="-202.0" onMouseClicked="#ResumeGame" opacity="0.89" preserveRatio="true">
+            <ImageView accessibleRole="BUTTON" fitHeight="549.0" fitWidth="661.0" layoutX="-202.0" layoutY="-202.0" onMouseClicked="#ResumeGame" preserveRatio="true">
                <image>
                   <Image url="@../img/Level3-7.png" />
                </image>

@@ -10,8 +10,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 import javafx.util.Pair;
 import javafx.scene.image.Image;
+
+import javax.naming.TimeLimitExceededException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.sql.Time;
 
 class Sun {
     private int time;
@@ -22,6 +25,7 @@ class Sun {
         Sunimg.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
+                System.out.println("Sun Collected");
                 Disappear();
                 Main.currentGame.collectedSun();
             }
@@ -32,22 +36,24 @@ class Sun {
     }
 
     private void Disappear(){
-        Character.gardenGrid.getChildren().remove(Sunimg);
+        Character.garden.getChildren().remove(Sunimg);
     }
 
     private void timeline(){
         Timeline t1 = new Timeline(new KeyFrame(Duration.seconds(0.2),new KeyValue(Sunimg.opacityProperty(),0),
                                                                       new KeyValue(Sunimg.disableProperty(),true)));
-
+        Timeline t2 = new Timeline(new KeyFrame(Duration.seconds(0),e->{
+           Disappear();
+        }));
         t1.setDelay(Duration.seconds(5));
-        t1.play();
-        Disappear();
+        SequentialTransition s = new SequentialTransition(t1,t2);
+        s.play();
     }
 
     private void Summon(int x, int y){
-        Sunimg.setFitHeight((double) Main.PlantImageHeight/2);
-        Sunimg.setFitWidth((double) Main.PlantImageWidth/2);
-        Sunimg.relocate(Main.ORIGIN_X+(x* Main.X)+ 5, Main.ORIGIN_Y+(y* Main.Y)+5);
+        Sunimg.setFitHeight((double) Main.PlantImageHeight/1.5);
+        Sunimg.setFitWidth((double) Main.PlantImageWidth/1.5);
+        Sunimg.relocate(Main.ORIGIN_X+(x* Main.X)+ 50, Main.ORIGIN_Y+(y* Main.Y)+50);
         Character.garden.getChildren().add(Sunimg);
     }
 }
@@ -83,3 +89,9 @@ class GameOverException extends Exception{
 class SunCollectedException extends Exception{
 
 }
+
+interface MyScene{}
+class MainMenu implements MyScene{}
+class ChooseUser implements MyScene{}
+class ChooseLevel implements MyScene{}
+class Garden implements MyScene{}

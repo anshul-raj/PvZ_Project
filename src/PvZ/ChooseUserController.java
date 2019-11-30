@@ -53,7 +53,7 @@ public class ChooseUserController implements Initializable {
         String s = ((Control) actionEvent.getSource()).getId();
         System.out.println(s);
         Main.currentUser = Main.app.getUserlist().get(Integer.parseInt(s.substring(3))-1);
-        Application_PvZ.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/Main-Menu.fxml");
+        Main.app.ChangeScreen((Node) actionEvent.getSource(),new MainMenu());
     }
 
     public void CreateUserBtn(ActionEvent actionEvent) {

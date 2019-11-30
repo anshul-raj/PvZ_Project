@@ -70,11 +70,12 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        Parent ChooseUserScene = app.ChooseUserScene.load();
-        Parent ChooseUserScene = app.ChooseUserScene.load();
-        primaryStage.setScene(new Scene(ChooseUserScene));
+        Parent UC = app.ChooseUserScene.load();
+        app.chooseUserController = (ChooseUserController) app.ChooseUserScene.getController();
+        System.out.println(app.chooseUserController);
+        primaryStage.setScene(new Scene(UC));
         primaryStage.show();
-        ChooseUserScene.requestFocus();
+        UC.requestFocus();
     }
 
     public static void main(String[] args) {
@@ -95,14 +96,10 @@ class Application_PvZ{
     public FXMLLoader ChooseLevelScene = new FXMLLoader(getClass().getResource("resources/FxmlFiles/Levels.fxml"));
     public FXMLLoader GameScene = new FXMLLoader(getClass().getResource("resources/FxmlFiles/PvZ_Layout_2.fxml"));
     //------------------------------------------------------
+
     static public String SelectedPlant = ""; // This Will Change Eventually -> Game
 
     public Application_PvZ() throws IOException {
-        chooseUserController = (ChooseUserController) ChooseUserScene.getController();
-        mainMenuController = (MainMenuController) MainMenuScene.getController();
-        levelsController = (LevelsController) ChooseLevelScene.getController();
-        gamecontroller = (Controller) GameScene.getController();
-        //----------
         try{
             File folder = new File("db/");
             if (folder.listFiles()!=null){
@@ -121,9 +118,23 @@ class Application_PvZ{
         return userlist;
     }
 
-    public static void ChangeScreen(Node n, String s) throws IOException {
-        Parent newScreen = FXMLLoader.load(Application_PvZ.class.getResource(s));
+    public void ChangeScreen(Node n, MyScene s) throws IOException {
+        Parent newScreen = null;
+        if (ChooseUser.class == s.getClass()) {
+            newScreen = ChooseUserScene.load();
+            chooseUserController = ChooseUserScene.getController();
+        } else if (MainMenu.class==s.getClass()) {
+            newScreen = MainMenuScene.load();
+            mainMenuController = MainMenuScene.getController();
+        } else if (ChooseLevel.class==s.getClass()) {
+            newScreen = ChooseLevelScene.load();
+            chooseUserController = ChooseUserScene.getController();
+        } else if (Garden.class == s.getClass()){
+            newScreen = GameScene.load();
+            gamecontroller = GameScene.getController();
+        }
         Stage window = (Stage) (n.getScene().getWindow());
+        assert newScreen != null;
         window.setScene(new Scene((newScreen)));
         window.show();
     }

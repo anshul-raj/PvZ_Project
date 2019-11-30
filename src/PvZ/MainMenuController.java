@@ -46,16 +46,17 @@ public class MainMenuController implements Initializable {
 
     @FXML
     public void StartGame(ActionEvent actionEvent) throws IOException {
-        Application_PvZ.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/PvZ_Layout_2.fxml");
+        Main.currentGame = Main.currentUser.getAllSaveGame().get(0);
+        Main.currentGame.load((Node) actionEvent.getSource());
     }
 
     @FXML
     public void ShowLevel(ActionEvent actionEvent) throws IOException {
-        Application_PvZ.ChangeScreen((Node) actionEvent.getSource(), "resources/FxmlFiles/Levels.fxml");
+        Main.app.ChangeScreen((Node) actionEvent.getSource(),new ChooseLevel());
     }
 
     @FXML
     public void ReturnToUserSelection(MouseEvent mouseEvent) throws IOException {
-        Application_PvZ.ChangeScreen((Node) mouseEvent.getSource(),"resources/FxmlFiles/Choose-User.fxml");
+        Main.app.ChangeScreen((Node) mouseEvent.getSource(),new ChooseUser());
     }
 }

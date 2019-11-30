@@ -58,6 +58,7 @@ public class Controller implements Initializable {
 
         Character.gardenGrid = GardenGrid;
         Character.garden = garden;
+        SunsCollected.setText(Integer.toString(Main.currentGame.getSunsCollected()));
 
         LeftPanel.setOpacity(0);
 
@@ -90,7 +91,7 @@ public class Controller implements Initializable {
 
     @FXML
     public void OpenMainMenu(ActionEvent actionEvent) throws IOException {
-        Application_PvZ.ChangeScreen((Node)actionEvent.getSource(),"resources/FxmlFiles/Main-Menu.fxml");
+        Main.app.ChangeScreen((Node) actionEvent.getSource(),new MainMenu());
     }
 
     @FXML
@@ -150,7 +151,8 @@ public class Controller implements Initializable {
 
     public void PlantPlaced(MouseEvent mouseEvent) {
         String name = Application_PvZ.SelectedPlant;
-
+        if (EstPlantX <0 || EstPlantY<0){return;}
+        if(Main.currentGame.getPlantsPlanted()[EstPlantX][EstPlantY]!=null){return;}
         switch (name) {
             case "SunflowerCard": {
                 Plants plant = new Sunflower(EstPlantX,EstPlantY);

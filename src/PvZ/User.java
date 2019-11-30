@@ -26,6 +26,10 @@ public class User implements Serializable {
         return USERNAME;
     }
 
+    public ArrayList<Game> getAllSaveGame() {
+        return AllSaveGame;
+    }
+
     public static User LoadUser(String name) throws IOException,ClassNotFoundException{
         ObjectInputStream input = null;
         User u = null;

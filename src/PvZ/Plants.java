@@ -25,6 +25,13 @@ class Plants extends Character{
     void ResizeImage(){
         img.setFitWidth(Main.PlantImageWidth);
         img.setFitHeight(Main.PlantImageHeight);
+        Main.currentGame.PlacePlant(this);
+    }
+
+    @Override
+    public void remove(){
+        super.remove();
+        Main.currentGame.RemovePlant(this);
     }
 }
 
@@ -52,6 +59,8 @@ class PeaShooter extends Plants implements Attacker{
 }
 
 class Sunflower extends Plants{
+    Sun s;
+
     Sunflower(int x,int y){
         super(50,50);
         System.out.println("Planting Sunflower");
@@ -60,7 +69,7 @@ class Sunflower extends Plants{
         ResizeImage();
         Summon(x,y);
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(8), ev -> {
             ProduceSun();
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
@@ -68,9 +77,9 @@ class Sunflower extends Plants{
 
     }
 
-    public void ProduceSun(){
+    private void ProduceSun(){
         try {
-            Sun s = new Sun(PresentTile.getKey(),PresentTile.getValue());
+            s = new Sun(PresentTile.getKey(),PresentTile.getValue());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

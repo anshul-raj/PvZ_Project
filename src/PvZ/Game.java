@@ -1,12 +1,15 @@
 package PvZ;
 
+import javafx.scene.Node;
+
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Game implements Serializable {
-     private final ArrayList<Plants> PlantsPlanted = new ArrayList<>();
+     private final Plants[][] PlantsPlanted = new Plants[8][5];
      private int SunsCollected = 0;
      private final Level PresentLevel;
      private final ArrayList<LawnMovers> LawnMoversActive = new ArrayList<>();
@@ -17,6 +20,11 @@ public class Game implements Serializable {
         PresentLevel = new Level(lvl);
     }
     // getters and setters --------------
+
+
+    public Plants[][] getPlantsPlanted() {
+        return PlantsPlanted;
+    }
 
     public int getSunsCollected() {
         return SunsCollected;
@@ -50,5 +58,21 @@ public class Game implements Serializable {
                 System.out.println("Its night, no suns left!!");
             }
         }
+    }
+
+    public void load(Node n){
+        try {
+            Main.app.ChangeScreen(n,new Garden());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void PlacePlant(Plants p){
+        this.PlantsPlanted[p.PresentTile.getKey()][p.PresentTile.getValue()] = p;
+    }
+
+    public void RemovePlant(Plants p){
+        this.PlantsPlanted[p.PresentTile.getKey()][p.PresentTile.getValue()] = null;
     }
 }

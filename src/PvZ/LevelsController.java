@@ -8,6 +8,6 @@ import java.io.IOException;
 public class LevelsController {
 
     public void LoadLevel(ActionEvent actionEvent) throws IOException {
-        Application_PvZ.ChangeScreen((Node) actionEvent.getSource(),"resources/FxmlFiles/PvZ_Layout.fxml");
+        Main.app.ChangeScreen((Node) actionEvent.getSource(),new Garden());
     }
 }
